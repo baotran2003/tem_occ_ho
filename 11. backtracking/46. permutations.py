@@ -1,3 +1,4 @@
+# Bài toán sinh hoán vị (dùng mảng used để đánh dấu và hoàn tác).
 def permute(nums):
     result = []
 
@@ -19,6 +20,7 @@ def permute(nums):
                 # 3. UNCHOOSE (BACKTRACK): Hoàn tác lựa chọn để thử trường hợp khác
                 current.pop()
                 used[i] = False
+            
 
     # Khởi tạo: danh sách rỗng và mảng đánh dấu chưa dùng
     backtrack([], [False] * len(nums))
