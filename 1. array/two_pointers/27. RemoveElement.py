@@ -2,7 +2,14 @@ from typing import List
 
 class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
-        # fast & slow pointers
+
+        # for i in range (n - 1, -1, -1):
+        #     if nums[i] == x:
+        #         nums.pop()
+        #
+        # return nums
+
+        # fast & slow point
         n: int = len(nums)
         count: int = 0
 

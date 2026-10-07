@@ -55,10 +55,6 @@ class Solution:
             p2 -= 1
             p -= 1
 
-
-
-
-
 if __name__ == "__main__":
     s: Solution = Solution()
     nums1: List[int] = [1, 2, 3, 0, 0, 0]

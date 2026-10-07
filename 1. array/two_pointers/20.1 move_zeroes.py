@@ -18,6 +18,7 @@ def move_zeroes(nums: List[int]) -> List[int]:
     # B2: Duyet mang, neu gap phan tu != 0 lay nums[k] = nums[i] tang k len 1 don vi
     # B3 cho vong lap di tu k -> n va gan num[k] = 0
 
+    # fast & slow pointer
     k: int = 0
     n: int = len(nums)
 
