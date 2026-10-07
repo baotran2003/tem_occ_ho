@@ -1,34 +1,36 @@
 from typing import List
+# hoan vi - chinh hop
 
 class Solution:
     def permute(self, nums: List[int]) -> List[List[int]]:
+        path: List[int] = []
+        result: List[List[int]] = []
         n: int = len(nums)
+
         used: List[bool] = n * [False]
 
-        path: List[int] = []
-
-        result: List[List[int]] = []
-        self.backtracking(path=path, used=used, nums=nums, n=n, result=result)
+        self.backtracking(n=n, used=used, path=path, nums=nums, result=result)
 
         return result
 
-    def backtracking(self, path: List[int], used: List[bool], nums: List[int], n: int, result: List[List[int]]) -> None:
-        # Step 1: Base case
+    def backtracking(self, n: int, used: List[bool], path: List[int], nums: List[int], result: List[List[int]]) -> None:
+        # Base Case
         if len(path) == n:
-            # result.append(path) -> key
             result.append(path[:])
             return
 
-        # Step 2: backtrack
-        for i in range(n):
+        for i in range (3):
             if used[i]:
                 continue
 
             path.append(nums[i])
             used[i] = True
-            self.backtracking(path=path, used=used, nums=nums, n=n, result=result)
+
+            self.backtracking(n=n, used=used, path=path, nums=nums, result=result)
+
             used[i] = False
             path.pop()
+
 
 if __name__ == "__main__":
     nums: List[int] = [1, 2, 3]

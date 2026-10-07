@@ -2,7 +2,7 @@ from typing import List
 
 
 class Solution:
-    def subsets(self, nums: List[int]) -> List[List[int]]:
+    def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
         path: List[int] = []
         result: List[List[int]] = []
         n: int = len(nums)
@@ -28,9 +28,7 @@ class Solution:
 
 
 if __name__ == "__main__":
-    nums: List[int] = [1, 2, 3]
+    nums: List[int] = [1, 2]
     s: Solution = Solution()
-    result: List[List[int]] = s.subsets(nums)
+    result: List[List[int]] = s.subsetsWithDup(nums)
     print(result)
-
-# 000, 001, 010, 011, 100, 101, 110, 111
