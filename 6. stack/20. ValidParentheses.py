@@ -21,13 +21,10 @@ def isValid(s: str) -> bool:
                 if stack.pop() != '{':
                     return False
 
-    return True
-
-
-
+    return not stack
 
 if __name__ == "__main__":
-    s = "(]"
+    s = "["
     print(isValid(s))
 
     s1 = "()[]{}"
