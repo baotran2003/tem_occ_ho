@@ -13,3 +13,26 @@ for right in range(len(nums)):
 
     # 3. Cập nhật kết quả với cửa sổ hợp lệ [left, right]
     result = max(result, right - left + 1)
+return result
+
+
+# Pattern voi window co kich thuoc k
+left = 0
+right = 0
+
+while right < len(blocks):
+
+    # 1. Expand
+    ...
+
+    # 2. Check window size
+    if right - left + 1 == k:
+
+        # 3. Process
+        ...
+
+        # 4. Shrink
+        ...
+
+    # 5. Move right
+    right += 1
